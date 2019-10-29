@@ -1,11 +1,33 @@
 {
   "name": "swedishbitter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/styles/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint"
   },
-  "author": "",
-  "license": "ISC"
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/assets/**/*.html",
+    "source/style/**/*.scss"
+  ],
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "browser-sync": "^2.26.7",
+    "buffer-replace": "^1.0.0",
+    "gulp": "^4.0.2",
+    "gulp-debug": "^4.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-resolve-url": "0.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "stream-combiner2": "^1.1.1",
+    "stylelint": "^10.1.0",
+    "stylelint-config-htmlacademy": "^0.1.4",
+    "stylelint-config-standard": "^19.0.0",
+    "through2": "^3.0.1"
+  }
 }
