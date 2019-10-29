@@ -1,0 +1,27 @@
+@mixin MontReg($font-size: 14px, $line-height: 24px, $color: black) {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin MontBlack($font-size, $line-height, $color: black) {
+  font-family: "Montserrat Black", "Arial", sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin MontMed($font-size, $line-height, $color: black) {
+  font-family: "Montserrat Medium", "Arial", sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin ProxBold($font-size, $line-height, $color: black) {
+  font-family: "Proxima Nova Bold", "Arial", sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}

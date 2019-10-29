@@ -15,15 +15,16 @@ const browserSync = require('browser-sync').create();
 
 gulp.task('assets', function() {
   return gulp.src('source/assets/**/*.*', {since: gulp.lastRun('assets')})
+    .pipe(debug({title: 'assets1'}))
     .pipe(newer('build'))
-    .pipe(debug({title: 'assets'}))
+    .pipe(debug({title: 'assets2'}))
     .pipe(gulp.dest('build'))
 });
 
 gulp.task('styles', function() {
 
   return combiner(
-    gulp.src('source/styles/styles.scss'),
+    gulp.src('source/styles/style.scss'),
     sourcemaps.init(),
     sass(),
     through2(function (file, enc, cb) {

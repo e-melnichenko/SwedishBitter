@@ -4,10 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
   <title>SwedishBitter</title>
 </head>
 <body>
-    <h1>hello!</h1>
+  <header class="page-header">
+    <a class="page-header__logo">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logo-desktop.png">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.png">
+        <img src="img/logo-mobile.png" alt="Swedish bitter logo">
+      </picture>
+    </a>
+    <p class="page-header__delivery">Доставка по всей России</p>
+    <div class="page-header__phone">
+      <a href="tel:+78000000000">8 800 000-00-00</a>
+      <small>Звонок бесплатный</small>
+    </div>
+  </header>
 </body>
 </html>

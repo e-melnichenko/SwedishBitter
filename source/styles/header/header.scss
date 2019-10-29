@@ -1,7 +1,94 @@
-h1 {
-  color: red;
+.page-header {
+  width: 300px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
-body {
-  background-image: url("./background-desktop.png");
+.page-header__logo {
+  width: 144px;
+  margin: 25px 0;
+}
+
+.page-header__delivery {
+  display: none;
+}
+
+.page-header__phone {
+  width: 144px;
+  margin: 28px 0;
+}
+
+.page-header__phone a {
+  display: block;
+
+  @include MontMed(14px, 14px);
+  text-decoration: none;
+  text-align: right;
+}
+
+.page-header__phone small {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    width: 728px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .page-header__logo {
+    width: 198px;
+    margin: 37px 0;
+    margin-right: 30px;
+  }
+
+  .page-header__delivery {
+    display: block;
+    margin-right: 30px;
+
+    color: #9a9a9a;
+  }
+
+  .page-header__phone {
+    width: 220px;
+    margin: 0;
+    margin-left: auto;
+  }
+
+  .page-header__phone a {
+    position: relative;
+    padding-left: 40px;
+
+    @include MontMed(20px, 24px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 15px;
+      top: 3px;
+      width: 16px;
+      height: 16px;
+
+      background-image: url("./icon-phone.png");
+    }
+  }
+
+  .page-header__phone small {
+    display: block;
+
+    @include MontReg(12px, 18px, #9a9a9a);
+    text-align: right;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    width: 1170px;
+    padding: 0 15px;
+  }
 }

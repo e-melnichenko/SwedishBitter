@@ -1,0 +1,14 @@
+body {
+  min-width: $mobile-width;
+  margin: 0;
+  padding: 0;
+
+  @include MontReg;
+
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  min-height: auto;
+}
