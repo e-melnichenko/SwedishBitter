@@ -1,0 +1,101 @@
+.facts {
+  width: 300px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.facts ul {
+  width: 200px;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 40px;
+  list-style: none;
+}
+
+.facts__wrapper {
+  display: flex;
+}
+
+.facts h3 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+
+  @include MontReg(24px, 24px, $green-txt);
+
+  border-bottom: 3px solid $green-txt;
+}
+
+.facts p {
+  margin: 0;
+  margin-bottom: 40px;
+
+  @include MontReg(16px, 24px);
+}
+
+@media (min-width: $tablet-width) {
+  .facts {
+    width: 728px;
+    padding: 0 20px;
+  }
+
+  .facts ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 580px;
+    padding-top: 80px;
+  }
+
+  .facts li {
+    position: relative;
+    width: 210px;
+    padding: 35px 0;
+    padding-left: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 25px;
+      height: 25px;
+      box-sizing: border-box;
+
+
+      border: 5px solid $green-txt;
+      border-radius: 50%;
+      opacity: 0.3;
+    }
+  }
+
+  .facts h3 {
+    margin: 0;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+
+    @include MontReg(30px, 30px, $green-txt);
+
+    border-bottom: 3px solid $green-txt;
+  }
+
+  .facts p {
+    margin: 0;
+    margin-bottom: 40px;
+
+    @include MontReg(16px, 24px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .facts {
+    width: 1170px;
+    padding: 0 15px;
+  }
+
+  .facts ul {
+    justify-content: space-around;
+    width: 1170px;
+  }
+}
+

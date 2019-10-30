@@ -3,6 +3,7 @@
   font-size: $font-size;
   line-height: $line-height;
   color: $color;
+  font-weight: normal;
 }
 
 @mixin MontBold($font-size, $line-height, $color: black) {
@@ -10,6 +11,7 @@
   font-size: $font-size;
   line-height: $line-height;
   color: $color;
+  font-weight: normal;
 }
 
 @mixin MontMed($font-size, $line-height, $color: black) {
@@ -17,6 +19,7 @@
   font-size: $font-size;
   line-height: $line-height;
   color: $color;
+  font-weight: normal;
 }
 
 // @mixin MontBlack($font-size, $line-height, $color: black) {
@@ -24,6 +27,7 @@
 //   font-size: $font-size;
 //   line-height: $line-height;
 //   color: $color;
+//   font-weight: normal;
 // }
 
 
@@ -32,4 +36,5 @@
 //   font-size: $font-size;
 //   line-height: $line-height;
 //   color: $color;
+//   font-weight: normal;
 // }
