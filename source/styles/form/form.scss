@@ -1,0 +1,51 @@
+.form {
+  width: 520px;
+  padding: 20px 25px;
+
+  background-color: #ffffff;
+}
+
+.form form {
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+
+  outline: 1px solid $green-txt;
+}
+
+.form__title {
+  padding-left: 50px;
+  padding-right: 280px;
+
+  @include MontBold(14px, 22px);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 420px;
+  margin-left: 50px;
+  margin-bottom: 70px;
+}
+
+.form__wrapper input {
+  width: 200px;
+  padding: 12px 0;
+
+  @include MontReg(14px, 14px, $green-txt);
+
+  border: none;
+  border-bottom: 1px solid $green-txt;
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+.form__button {
+  width: 250px;
+  margin-left: calc(100% - 250px);
+}
+

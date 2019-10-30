@@ -1,0 +1,161 @@
+.about-us {
+  width: 320px;
+  min-height: 435px;
+
+  margin: 0 auto;
+
+  background-image: url("./background-mobile.png");
+  background-color: #737588;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.about-us__container {
+  width: 300px;
+  min-height: 375px;
+
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.about-us__pre-title {
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 15px;
+
+  @include MontBold(12px, 16px, white);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.about-us__title {
+  margin: 0;
+  padding: 0 30px;
+  padding-bottom: 15px;
+
+  @include MontReg(30px, 36px, white);
+  text-align: center;
+}
+
+.about-us__description {
+  display: none;
+}
+
+.about-us__pack {
+  display: block;
+  margin: 0 auto;
+}
+
+.about-us__form {
+  display: none;
+}
+
+.about-us__button {
+  width: 320px;
+}
+
+@media (min-width: $tablet-width) {
+  .about-us {
+    position: relative;
+    width: 768px;
+    min-height: 544px;
+
+    background-image: url("./background-tablet.png");
+  }
+
+  .about-us__container {
+    width: 728px;
+    padding: 0 20px;
+    padding-top: 0;
+  }
+
+  .about-us__wrapper {
+    padding-left: 370px;
+    padding-top: 100px;
+  }
+
+  .about-us__pre-title {
+    padding-top: 0;
+
+    @include MontBold(14px, 18px, white);
+    text-align: left;
+  }
+
+  .about-us__title {
+    padding: 0;
+
+    @include MontReg(50px, 60px, white);
+    text-align: left;
+  }
+
+  .about-us__description {
+    display: block;
+    padding-right: 130px;
+
+    @include MontReg(16px, 24px, white);
+    text-align: left;
+  }
+
+  .about-us__pack {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    margin: 0;
+  }
+
+  .about-us__form {
+    position: absolute;
+    bottom: -250px;
+    right: 20px;
+    display: block;
+  }
+
+  .about-us__button {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us {
+    width: 100%;
+
+    background-image: url("./background-desktop.png");
+  }
+
+  .about-us__container {
+    width: 1170px;
+    padding: 0 15px;
+  }
+
+  .about-us__wrapper {
+    padding-left: 600px;
+    padding-top: 185px;
+  }
+
+  .about-us__title {
+    @include MontReg(60px, 70px, white);
+  }
+
+  .about-us__description {
+    padding-right: 70px;
+
+    @include MontReg(18px, 24px, white);
+  }
+
+  .about-us__pack {
+    position: absolute;
+    top: 130px;
+    left: calc((100% - 1200px) / 2 + 145px);
+  }
+
+  .about-us__form {
+    position: absolute;
+    bottom: -220px;
+    right: calc((100% - 1200px) / 2 + 15px);
+    display: block;
+  }
+
+  .about-us__button {
+    display: none;
+  }
+}

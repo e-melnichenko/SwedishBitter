@@ -1,0 +1,37 @@
+.button {
+  position: relative;
+  display: inline-block;
+  min-width: 144px;
+  padding: 24px 0;
+
+  @include MontBold(12px, 12px, white);
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  text-transform: uppercase;
+
+
+  background-color: $green-btn;
+  background-repeat: no-repeat;
+  border: none;
+
+  cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    padding: 28px 0;
+
+    @include MontBold(14px, 14px, white);
+
+    &::after {
+      content: "";
+      display: inline-block;
+      margin-left: 30px;
+      width: 31px;
+      height: 9px;
+
+      background-image: url("./icon-right-arrow.png");
+    }
+  }
+}

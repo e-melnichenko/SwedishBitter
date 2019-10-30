@@ -5,8 +5,8 @@
   color: $color;
 }
 
-@mixin MontBlack($font-size, $line-height, $color: black) {
-  font-family: "Montserrat Black", "Arial", sans-serif;
+@mixin MontBold($font-size, $line-height, $color: black) {
+  font-family: "Montserrat Bold", "Arial", sans-serif;
   font-size: $font-size;
   line-height: $line-height;
   color: $color;
@@ -19,9 +19,17 @@
   color: $color;
 }
 
-@mixin ProxBold($font-size, $line-height, $color: black) {
-  font-family: "Proxima Nova Bold", "Arial", sans-serif;
-  font-size: $font-size;
-  line-height: $line-height;
-  color: $color;
-}
+// @mixin MontBlack($font-size, $line-height, $color: black) {
+//   font-family: "Montserrat Black", "Arial", sans-serif;
+//   font-size: $font-size;
+//   line-height: $line-height;
+//   color: $color;
+// }
+
+
+// @mixin ProxBold($font-size, $line-height, $color: black) {
+//   font-family: "Proxima Nova Bold", "Arial", sans-serif;
+//   font-size: $font-size;
+//   line-height: $line-height;
+//   color: $color;
+// }

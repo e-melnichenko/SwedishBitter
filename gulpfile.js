@@ -15,9 +15,8 @@ const browserSync = require('browser-sync').create();
 
 gulp.task('assets', function() {
   return gulp.src('source/assets/**/*.*', {since: gulp.lastRun('assets')})
-    .pipe(debug({title: 'assets1'}))
+    .pipe(debug({title: 'assets'}))
     .pipe(newer('build'))
-    .pipe(debug({title: 'assets2'}))
     .pipe(gulp.dest('build'))
 });
 

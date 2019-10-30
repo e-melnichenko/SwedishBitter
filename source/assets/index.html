@@ -22,5 +22,35 @@
       <small>Звонок бесплатный</small>
     </div>
   </header>
+
+  <main>
+    <section class="about-us">
+      <div class="about-us__container">
+        <div class="about-us__wrapper">
+          <p class="about-us__pre-title">Сбор трав</p>
+          <h1 class="about-us__title">Шведская горечь</h1>
+          <p class="about-us__description">Не имеет аналогов в мире по оздоровительной силе и широте лечебных свойств</p>
+        </div>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/packaging-desktop.png">
+          <source media="(min-width: 768px)" srcset="img/packaging-tablet.png">
+          <img src="img/packaging-mobile.png" alt="Упаковка Swidish bitter" class="about-us__pack">
+        </picture>
+        <div class="about-us__form form">
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <h2 class="form__title">Узнайте подробнее о бальзаме</h2>
+            <div class="form__wrapper">
+              <label for="name" class="visually-hidden">Имя</label>
+              <input type="text" id="name" placeholder="Имя" name="name">
+              <label for="phone" class="visually-hidden">Телефон</label>
+              <input type="phone" id="phone" placeholder="Телефон" name="phone">
+            </div>
+            <button class="form__button button" type="submit">Узнать</button>
+          </form>
+        </div>
+      </div>
+      <a class="about-us__button button">Узнать больше</a>
+    </section>
+  </main>
 </body>
 </html>
