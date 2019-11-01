@@ -1,9 +1,3 @@
-.facts {
-  width: 300px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
 .facts ul {
   width: 200px;
   margin: 0 auto;
@@ -34,11 +28,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .facts {
-    width: 728px;
-    padding: 0 20px;
-  }
-
   .facts ul {
     display: flex;
     justify-content: space-between;
@@ -88,11 +77,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .facts {
-    width: 1170px;
-    padding: 0 15px;
-  }
-
   .facts ul {
     justify-content: space-around;
     width: 1170px;

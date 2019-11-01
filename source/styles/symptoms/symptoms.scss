@@ -1,0 +1,217 @@
+.symptoms {
+  position: relative;
+}
+
+.symptoms__question {
+  @include MontBold(24px, 30px);
+  text-align: center;
+}
+
+.symptoms__wrapper-list {
+  background-color: #f6f9f3;
+}
+
+.symptoms__list {
+  text-decoration: none;
+}
+
+.symptoms__list li {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 0;
+
+  border-bottom: 1px solid rgba($green-txt, 0.2);
+
+  &:last-child {
+    padding-bottom: 230px;
+    border: none;
+  }
+}
+
+.symptoms__number {
+  @include MontBold(12px, 20px, $green-txt);
+  letter-spacing: 1px;
+}
+
+.symptoms__name {
+  padding-left: 10px;
+
+  @include MontBold(12px, 20px);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.symptoms__reviews {
+  position: absolute;
+  bottom: 90px;
+  left: calc((100% - 300px) / 2);
+  width: 300px;
+
+  border: 1px solid $green-txt;
+}
+
+.symptoms__reviews p {
+  position: relative;
+  padding: 25px 15px;
+
+  @include MontReg(14px, 24px);
+}
+
+.symptoms__wrapper-btn {
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: -10px;
+}
+
+.symptoms__button-review {
+  margin: 0 auto;
+  padding: 0 7px;
+
+  @include MontBold(14px, 24px, $green-txt);
+  text-decoration: none;
+
+  background-color: #f6f9f3;
+  border-bottom: 1px solid $green-txt;
+}
+
+.symptoms__button-esc-problem {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .symptoms {
+    margin-bottom: 100px;
+  }
+
+  .symptoms__question {
+    padding: 0 180px;
+
+    @include MontBold(30px, 40px);
+  }
+
+  .symptoms__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 620px;
+  }
+
+  .symptoms__list li {
+    width: 100%;
+  }
+
+
+  .symptoms__list li:nth-child(n+6) {
+    width: 50%;
+  }
+
+  .symptoms__list li:nth-child(2n+7) {
+    box-sizing: border-box;
+    border-left: 1px solid rgba($green-txt, 0.2);
+
+    .symptoms__number {
+      margin-left: 20px;
+    }
+  }
+
+  .symptoms__number {
+    @include MontBold(14px, 20px, $green-txt);
+  }
+
+  .symptoms li:last-child {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba($green-txt, 0.2);
+  }
+
+  .symptoms__name {
+    @include MontBold(14px, 20px);
+  }
+
+  .symptoms__wrapper-rev {
+    width: 100%;
+    min-height: 689px;
+
+    background-image: url("./skeleton-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #a4c58c;
+  }
+
+  .symptoms__reviews {
+    padding: 20px;
+    bottom: -50px;
+    left: calc(50% - 416px / 2);
+    width: 416px;
+    box-sizing: border-box;
+
+    background-color: #f6f9f3;
+    border: none;
+  }
+
+  .symptoms__reviews p {
+    padding: 40px;
+
+    @include MontReg(16px, 24px);
+
+    border: 1px solid $green-txt;
+  }
+
+  .symptoms__wrapper-btn {
+    margin-bottom: 0;
+    margin-top: -30px;
+  }
+
+  .symptoms__button-review {
+    z-index: 10;
+  }
+
+  .symptoms__button-esc-problem {
+    position: absolute;
+    bottom: -150px;
+    left: calc(50% - 416px / 2);
+    width: 416px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .symptoms__question {
+    padding: 0;
+    padding-right: 800px;
+
+    text-align: left;
+  }
+
+  .symptoms__list {
+    width: 650px;
+    margin: 0;
+    margin-left: calc((100% - 1200px + 15px) / 2);
+    padding-bottom: 30px;
+  }
+
+  .symptoms__list li {
+    padding: 15px 0;
+  }
+
+  .symptoms__wrapper-rev {
+    position: absolute;
+    top: 0;
+    right: calc((100% - 1200px + 15px) / 2);
+    width: 500px;
+
+    background-image: url("./skeleton-desktop.png");
+  }
+
+  .symptoms__reviews {
+    bottom: -30px;
+    left: 0;
+  }
+
+  .symptoms__button-review {
+    margin-left: 30px;
+  }
+
+  .symptoms__button-esc-problem {
+    bottom: -120px;
+    left: calc(50% - 500px / 2);
+    width: 500px;
+  }
+}

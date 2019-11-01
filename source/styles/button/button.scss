@@ -3,6 +3,7 @@
   display: inline-block;
   min-width: 144px;
   padding: 24px 0;
+  // box-sizing: border-box;
 
   @include MontBold(12px, 12px, white);
   text-align: center;

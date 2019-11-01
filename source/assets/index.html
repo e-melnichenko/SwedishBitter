@@ -8,7 +8,7 @@
   <title>SwedishBitter</title>
 </head>
 <body>
-  <header class="page-header">
+  <header class="page-header container">
     <a class="page-header__logo">
       <picture>
         <source media="(min-width: 1200px)" srcset="img/logo-desktop.png">
@@ -25,7 +25,7 @@
 
   <main>
     <section class="about-us">
-      <div class="about-us__container">
+      <div class="about-us__container container">
         <div class="about-us__wrapper">
           <p class="about-us__pre-title">Сбор трав</p>
           <h1 class="about-us__title">Шведская горечь</h1>
@@ -52,7 +52,8 @@
       <a class="about-us__button button">Узнать больше</a>
     </section>
 
-    <section class="facts">
+    <section class="facts container">
+      <h2 class="visually-hidden">Факты о нас</h2>
       <ul>
         <li>
           <div class="facts__wrapper">
@@ -79,6 +80,62 @@
           <p class="facts__description">8 млн книг на 24 языках продано о бальзаме</p>
         </li>
       </ul>
+    </section>
+
+    <section class="symptoms">
+      <h2 class="visually-hidden">Ваши симптомы</h2>
+      <div class="container">
+        <h3 class="symptoms__question">Что из этого списка вы находите у себя?</h3>
+      </div>
+      <div class="symptoms__wrapper-list">
+        <ul class="symptoms__list container">
+          <li>
+            <p class="symptoms__number">01.</p>
+            <p class="symptoms__name">Сниженный тонус, не хватает энергии</p>
+          </li>
+          <li>
+            <p class="symptoms__number">02.</p>
+            <p class="symptoms__name">Прыщи, бородавки и растяжки</p>
+          </li>
+          <li>
+            <p class="symptoms__number">03.</p>
+            <p class="symptoms__name">Слабая память и концентрация</p>
+          </li>
+          <li>
+            <p class="symptoms__number">04.</p>
+            <p class="symptoms__name">Болеете чаще раза в год?</p>
+          </li>
+          <li>
+            <p class="symptoms__number">05.</p>
+            <p class="symptoms__name">Головные боли</p>
+          </li>
+          <li>
+            <p class="symptoms__number">06.</p>
+            <p class="symptoms__name">Синяки, шишки, ожоги, порезы долго не проходят </p>
+          </li>
+          <li>
+            <p class="symptoms__number">07.</p>
+            <p class="symptoms__name">Плохо засыпаете и часто просыпаетесь</p>
+          </li>
+          <li>
+            <p class="symptoms__number">08.</p>
+            <p class="symptoms__name">Проблемы с желудком</p>
+          </li>
+          <li>
+            <p class="symptoms__number">09.</p>
+            <p class="symptoms__name">Стресс</p>
+          </li>
+        </ul>
+      </div>
+      <div class="symptoms__wrapper-rev">
+        <div class="symptoms__reviews">
+          <p>Более 2 000 покупателей доказали эффективность «Шведской горечи» в&nbsp;каждом из этих случаев</p>
+          <div class="symptoms__wrapper-btn">
+            <a href="#" class="symptoms__button-review">Читать отзывы</a>
+          </div>
+        </div>
+        <a href="#" class="symptoms__button-esc-problem button">избавиться от проблем</a>
+      </div>
     </section>
   </main>
 </body>
