@@ -1,5 +1,6 @@
 .symptoms {
   position: relative;
+  margin-bottom: 50px;
 }
 
 .symptoms__question {
@@ -80,7 +81,7 @@
 
 @media (min-width: $tablet-width) {
   .symptoms {
-    margin-bottom: 100px;
+    margin-bottom: 250px;
   }
 
   .symptoms__question {

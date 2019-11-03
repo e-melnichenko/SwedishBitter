@@ -22,6 +22,24 @@
   font-weight: normal;
 }
 
+@mixin contMobile {
+  width: 300px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+@mixin contTablet {
+  width: 728px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin contDesktop {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 // @mixin MontBlack($font-size, $line-height, $color: black) {
 //   font-family: "Montserrat Black", "Arial", sans-serif;
 //   font-size: $font-size;
