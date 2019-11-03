@@ -1,0 +1,318 @@
+.history__wrapper-title {
+  background-color: #f6f9f3;
+
+  @include contMobile;
+}
+
+.history__title {
+  margin: 0;
+  padding: 30px 0;
+
+  @include MontBold(20px, 26px);
+  text-align: center;
+}
+
+.history__wrapper-text {
+  @include contMobile;
+
+  background-color: #f6f9f3;
+}
+
+.history__text {
+  margin: 0;
+  padding: 5px 0;
+
+  @include MontReg(14px, 24px);
+}
+
+.history__wrapper-pic {
+  width: 320px;
+  min-height: 382px;
+  margin: 0 auto;
+  background-image: url("./renaissance-picture-mobile.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+.history__window-mail {
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.history__window-mail p {
+  padding: 0 20px;
+
+  @include MontBold(14px, 22px);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.history__window-mail form {
+  margin: 0;
+  padding: 0;
+}
+
+.history__window-mail input {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  @include MontReg(14px, 14px);
+  color: $green-txt;
+
+
+  border: none;
+  border-bottom: 1px solid rgba($green-txt, 0.6);
+
+  &::placeholder {
+    color: inherit;
+    text-align: center;
+  }
+}
+
+.history__window-mail button {
+  width: 100%;
+}
+
+.history__wrapper-quote {
+  @include contMobile;
+}
+
+.history__wrapper-quote blockquote {
+  margin: 0;
+
+  @include MontBold(14px, 24px);
+  text-align: center;
+}
+
+.history__author {
+  padding: 0 50px;
+  text-align: center;
+}
+
+.history__author cite {
+  @include MontReg(14px, 18px);
+  font-style: normal;
+}
+
+.history__author i {
+  @include MontReg(12px, 30px);
+  color: #9a9a9a;
+}
+
+@media (min-width: $tablet-width) {
+  .history__wrapper-title {
+    @include contTablet;
+    padding-top: 200px;
+  }
+
+  .history__title {
+    padding: 30px 40px;
+
+    @include MontBold(30px, 40px);
+  }
+
+  .history__title br {
+    display: none;
+  }
+
+  .history__wrapper-text {
+    @include contTablet;
+    padding-bottom: 60px;
+  }
+
+  .history__text {
+    font-size: 16px;
+  }
+
+  .history__wrapper2 {
+    @include contTablet;
+    display: flex;
+    margin-top: -20px;
+    margin-bottom: 50px;
+  }
+
+  .history__wrapper-pic {
+    order: 2;
+    width: 352px;
+    min-height: 419px;
+
+    background-image: url("./renaissance-picture-tablet.png");
+    background-repeat: no-repeat;
+  }
+
+  .history__window-mail {
+    width: 276px;
+    margin: 0;
+    padding: 0 50px;
+    padding-top: 60px;
+  }
+
+  .history__window-mail p {
+    padding: 0;
+    padding-right: 50px;
+
+    text-align: left;
+  }
+
+  .history__window-mail input {
+    width: 100%;
+    margin-bottom: 50px;
+
+    &::placeholder {
+      text-align: left;
+    }
+  }
+
+  .history__window-mail button {
+    width: 100%;
+  }
+
+  .history__wrapper-quote {
+    width: 728px;
+    padding: 0;
+
+    border-top: 2px solid $green-btn;
+    border-bottom: 2px solid $green-btn;
+  }
+
+  .history__wrapper-quote blockquote {
+    margin: 50px 0;
+    padding: 0 40px;
+
+    @include MontBold(18px, 36px);
+  }
+
+  .history__author {
+    margin: 50px 0;
+    padding: 0;
+  }
+
+  .history__author br {
+    display: none;
+  }
+
+  .history__author cite {
+    @include MontReg(16px, 30px);
+  }
+
+  .history__author i {
+    @include MontReg(12px, 30px);
+    color: #9a9a9a;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .history {
+    position: relative;
+  }
+
+  .history__wrapper1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(50% + 115px);
+  }
+
+  .history__wrapper-title {
+    width: 700px;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    padding-left: 15px;
+    padding-top: 100px;
+    padding-bottom: 30px;
+
+    background-color: transparent;
+  }
+
+  .history__title {
+    padding: 0;
+
+    @include MontBold(40px, 50px);
+    text-align: left;
+  }
+
+  .history__wrapper-text {
+    width: 100%;
+    margin: 0;
+    padding: 50px 0;
+  }
+
+  .history__text {
+    display: block;
+    width: 660px;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 40px;
+  }
+
+  .history__wrapper2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: auto;
+    max-width: 1720px;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 50px;
+    padding: 0;
+  }
+
+  .history__wrapper-pic {
+    width: calc(50% - 85px);
+    max-width: 774px;
+    height: 920px;
+    margin: 0;
+
+    background-image: url("./renaissance-picture-desktop.png");
+  }
+
+  .history__window-mail {
+    width: 375px;
+    margin-right: 70px;
+    padding: 0;
+  }
+
+  .history__window-mail p {
+    padding: 0;
+    padding-right: 10px;
+
+    text-align: left;
+  }
+
+  .history__wrapper-quote {
+    width: 785px;
+    padding: 0;
+
+    border-top: 2px solid $green-btn;
+    border-bottom: 2px solid $green-btn;
+  }
+
+  .history__wrapper-quote blockquote {
+    padding: 0;
+
+    @include MontBold(24px, 40px);
+  }
+
+  .history__author {
+    margin: 50px 0;
+    padding: 0;
+  }
+
+  .history__author br {
+    display: none;
+  }
+
+  .history__author cite {
+    @include MontReg(18px, 30px);
+  }
+
+  .history__author i {
+    @include MontReg(16px, 30px);
+  }
+}
