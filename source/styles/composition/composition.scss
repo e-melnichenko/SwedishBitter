@@ -1,0 +1,322 @@
+.composition {
+  width: $mobile-width;
+  margin: 0 auto;
+}
+
+.composition__wrapper {
+  @include contMobile;
+}
+
+.composition__title {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+
+  @include MontBold(24px, 30px);
+  text-align: center;
+}
+
+.composition__title br {
+  display: none;
+}
+
+.composition__desclist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.composition__desclist-item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 40px;
+
+  @include MontReg(14px, 22px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 16px;
+    display: block;
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    background-color: $green-btn;
+  }
+}
+
+.composition__herbslist {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 200px;
+  padding: 0;
+}
+
+.composition__herbslist-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  min-height: 300px;
+  margin: 10px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    display: block;
+    background-color: green;
+    opacity: 0.05;
+  }
+}
+
+.composition__number {
+  align-self: flex-start;
+  padding-bottom: 20px;
+
+  @include MontReg(14px, 26px, rgba($green-txt, 0.6));
+  writing-mode: vertical-lr;
+
+  transform: rotate(180deg);
+}
+
+.composition__herb-name {
+  padding-top: 20px;
+
+  @include MontReg(14px, 26px, rgba($green-txt, 0.6));
+  writing-mode: vertical-lr;
+
+  transform: rotate(180deg);
+}
+
+.composition__herbslist-item picture {
+  align-self: center;
+}
+
+.composition__herbslist-item--last::after {
+  content: "?";
+  position: absolute;
+  left: 100px;
+  top: 20px;
+  z-index: -1;
+
+  @include ProxBold(276px, 276px, rgba($green-txt, 0.6));
+}
+
+.composition__herbslist-item--last b {
+  margin-top: 130px;
+  padding-right: 100px;
+
+  @include MontBold(14px, 25px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.composition__text-end {
+  display: none;
+}
+
+.composition__text-desktop {
+  display: none;
+}
+
+.composition__button {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .composition {
+    @include contTablet;
+    position: relative;
+  }
+
+  .composition__wrapper {
+    width: 540px;
+    padding: 0;
+  }
+
+  .composition__title {
+    @include MontBold(30px, 40px);
+  }
+
+  .composition__desclist-item {
+    margin-bottom: 30px;
+
+    @include MontReg(16px, 22px);
+  }
+
+  .composition__herbslist {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 15px;
+  }
+
+  .composition__herbslist-item {
+    width: 330px;
+    min-height: 330px;
+    margin: 20px 0;
+
+    &::before {
+      height: 330px;
+    }
+  }
+
+  .composition__number {
+    @include MontReg(16px, 30px, rgba($green-txt, 0.6));
+  }
+
+  .composition__herb-name {
+    @include MontReg(16px, 30px, rgba($green-txt, 0.6));
+  }
+
+  .composition__herbslist-item--last {
+    margin-bottom: 0;
+  }
+
+  .composition__herbslist-item--last::after {
+    @include ProxBold(306px, 306px, rgba($green-txt, 0.6));
+  }
+
+  .composition__herbslist-item--last b {
+    padding-right: 80px;
+
+    @include MontBold(17px, 26px);
+  }
+
+  .composition__window {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    width: 344px;
+    height: 330px;
+
+    border-left: 1px solid $green-btn;
+    border-top: 1px solid $green-btn;
+  }
+
+  .composition__text-end {
+    display: block;
+    margin: 0;
+    margin-bottom: 70px;
+    padding: 0 35px;
+    padding-top: 80px;
+
+    @include MontReg(16px, 24px);
+  }
+
+  .composition__button {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .composition {
+    @include contDesktop;
+  }
+
+  .composition__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .composition__title {
+    @include MontBold(40px, 50px);
+    text-align: left;
+  }
+
+  .composition__title br {
+    display: block;
+  }
+
+  .composition__desclist-item {
+    padding-right: 20px;
+  }
+
+  .composition__herbslist {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    padding-top: 70px;
+
+    li:nth-child(2) {
+      margin-right: 50%;
+    }
+  }
+
+  .composition__herbslist-item {
+    width: 270px;
+    min-height: 270px;
+
+    &::before {
+      height: 270px;
+    }
+  }
+
+  .composition__number {
+    @include MontReg(14px, 24px, rgba($green-txt, 0.6));
+  }
+
+  .composition__herb-name {
+    @include MontReg(14px, 24px, rgba($green-txt, 0.6));
+  }
+
+  .composition__herbslist-item--last {
+    margin-left: auto;
+  }
+
+  .composition__herbslist-item--last::after {
+    @include ProxBold(250px, 250px, rgba($green-txt, 0.6));
+  }
+
+  .composition__herbslist-item--last b {
+    padding-right: 40px;
+
+    @include MontBold(14px, 22px);
+  }
+
+  .composition__window {
+    left: 15px;
+    width: 830px;
+    height: 253px;
+
+    border: 1px solid $green-txt;
+  }
+
+  .composition__text-end {
+    margin-bottom: 10px;
+    padding: 0 70px;
+    padding-top: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50px;
+      top: 47px;
+      width: 8px;
+      height: 8px;
+
+      background-color: $green-txt;
+      border-radius: 50%;
+    }
+  }
+
+  .composition__text-desktop {
+    display: block;
+    margin-bottom: 70px;
+    padding: 0 70px;
+
+    @include MontReg(16px, 24px);
+  }
+
+  .composition__button {
+    right: 0;
+    width: 350px;
+  }
+}

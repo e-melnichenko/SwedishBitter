@@ -153,6 +153,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .extra {
+    margin-bottom: 200px;
+  }
+
   .extra__wrapper-title {
     width: 100%;
     margin: 0;
