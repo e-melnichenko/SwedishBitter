@@ -1,0 +1,210 @@
+.extra {
+  background-color: #f6f9f3;
+}
+
+.extra__wrapper-title {
+  @include contMobile;
+  padding-top: 30px;
+}
+
+.extra__title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0 20px;
+
+  @include MontBold(24px, 30px);
+  text-align: center;
+}
+
+.extra__wrapper-list {
+  @include contMobile;
+}
+
+.extra__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.extra__list-item {
+  position: relative;
+  padding-bottom: 60px;
+
+  @include MontBold(12px, 20px);
+  text-align: center;
+  text-transform: uppercase;
+
+  &::before {
+    display: block;
+    padding-bottom: 20px;
+
+    @include MontBlack(130px, 130px);
+    color: #ffffff;
+    text-align: center;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    height: 100px;
+
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.extra__list-item--herb {
+  &::before {
+    content: "01";
+  }
+
+  &::after {
+    background-image: url("./icon-herbs-mobile.png");
+  }
+}
+
+.extra__list-item--book {
+  &::before {
+    content: "02";
+  }
+
+  &::after {
+    background-image: url("./icon-book-mobile.png");
+  }
+}
+
+.extra__list-item--cert {
+  &::before {
+    content: "03";
+  }
+
+  &::after {
+    background-image: url("./icon-certificate-mobile.png");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .extra {
+    padding-bottom: 100px;
+  }
+
+  .extra__wrapper-title {
+    @include contTablet;
+    padding-top: 60px;
+  }
+
+  .extra__title {
+    padding: 0 50px;
+
+    @include MontBold(30px, 40px);
+  }
+
+  .extra__wrapper-list {
+    @include contTablet;
+  }
+
+  .extra__list {
+    display: flex;
+    justify-content: space-between;
+    width: 698px;
+    padding: 15px;
+
+    background-color: #ffffff;
+  }
+
+  .extra__list-item {
+    width: 223px;
+    min-height: 225px;
+    padding-bottom: 0;
+
+    @include MontBold(10px, 14px);
+
+    border: 1px solid #edf3e8;
+
+    &::before {
+      display: block;
+      padding-top: 40px;
+
+      @include MontBlack(110px, 110px);
+      color: #f7f9f3;
+    }
+
+    &::after {
+      display: block;
+      height: 100px;
+      top: 50px;
+    }
+  }
+
+  .extra__list-item--herb::after {
+    background-image: url("./icon-herbs-tablet.png");
+  }
+
+  .extra__list-item--book::after {
+    background-image: url("./icon-book-tablet.png");
+  }
+
+  .extra__list-item--cert::after {
+    background-image: url("./icon-certificate-tablet.png");
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra__wrapper-title {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 100px;
+    padding-bottom: 80px;
+
+    background-color: #ffffff;
+  }
+
+  .extra__title {
+    @include contDesktop;
+    display: block;
+    padding-right: 630px;
+    box-sizing: border-box;
+
+    @include MontBold(40px, 50px);
+    text-align: left;
+  }
+
+  .extra__wrapper-list {
+    @include contDesktop;
+    margin-top: -70px;
+  }
+
+  .extra__list {
+    width: 970px;
+    margin: 0 auto;
+  }
+
+  .extra__list-item {
+    width: 313px;
+    min-height: 315px;
+
+    @include MontBold(14px, 20px);
+
+    &::before {
+      padding-top: 30px;
+
+      @include MontBlack(150px, 150px, #f7f9f3);
+    }
+  }
+
+  .extra__list-item--herb::after {
+    background-image: url("./icon-herbs-desktop.png");
+  }
+
+  .extra__list-item--book::after {
+    background-image: url("./icon-book-desktop.png");
+  }
+
+  .extra__list-item--cert::after {
+    background-image: url("./icon-certificate-desktop.png");
+  }
+}

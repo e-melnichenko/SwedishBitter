@@ -22,6 +22,14 @@
   font-weight: normal;
 }
 
+@mixin MontBlack($font-size, $line-height, $color: black) {
+  font-family: "Montserrat Black", "Arial", sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: normal;
+}
+
 @mixin contMobile {
   width: 300px;
   margin: 0 auto;
@@ -39,15 +47,6 @@
   margin: 0 auto;
   padding: 0 15px;
 }
-
-// @mixin MontBlack($font-size, $line-height, $color: black) {
-//   font-family: "Montserrat Black", "Arial", sans-serif;
-//   font-size: $font-size;
-//   line-height: $line-height;
-//   color: $color;
-//   font-weight: normal;
-// }
-
 
 // @mixin ProxBold($font-size, $line-height, $color: black) {
 //   font-family: "Proxima Nova Bold", "Arial", sans-serif;
