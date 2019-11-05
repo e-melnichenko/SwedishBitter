@@ -17,6 +17,10 @@
   border: none;
 
   cursor: pointer;
+
+  &--two-line {
+    padding: 14px 40px;
+  }
 }
 
 @media (min-width: $tablet-width) {
