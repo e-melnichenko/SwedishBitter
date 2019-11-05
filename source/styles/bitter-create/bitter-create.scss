@@ -1,0 +1,103 @@
+.bitter-create {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.bitter-create__wrapper-cont {
+  @include contMobile;
+}
+
+.bitter-create__title {
+  @include MontBold(24px, 30px);
+  text-align: center;
+}
+
+.bitter-create__desc {
+  @include MontReg(14px, 22px);
+}
+
+.bitter-create b {
+  display: block;
+  margin-bottom: 30px;
+
+  @include MontBold(12px, 20px);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.bitter-create__button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: $tablet-width) {
+  .bitter-create {
+    width: 768px;
+  }
+
+  .bitter-create__wrapper {
+    width: 650px;
+    margin: 0 auto;
+    padding: 70px;
+    padding-right: 40px;
+    box-sizing: border-box;
+
+    border: 1px solid $green-txt;
+  }
+
+  .bitter-create__wrapper-cont {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .bitter-create__title {
+    font-size: 40px;
+    line-height: 50px;
+    text-align: left;
+  }
+
+  .bitter-create__desc {
+    font-size: 16px;
+  }
+
+  .bitter-create b {
+    margin-bottom: 50px;
+
+    font-size: 14px;
+    text-align: left;
+
+    br {
+      display: none;
+    }
+  }
+
+  .bitter-create__button {
+    width: 500px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .bitter-create {
+    position: relative;
+    width: auto;
+  }
+
+  .bitter-create__wrapper {
+    position: absolute;
+    top: 80px;
+    left: calc(50% - 85px);
+
+    background-color: #ffffff;
+    outline: 20px solid #ffffff;
+  }
+
+  .bitter-create__pict {
+    width: calc(50% + 215px);
+    height: 775px;
+
+    background-image: url("./bottle-desktop.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+}
