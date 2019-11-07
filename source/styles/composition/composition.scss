@@ -1,10 +1,5 @@
 .composition {
-  width: $mobile-width;
-  margin: 0 auto;
-}
-
-.composition__wrapper {
-  @include contMobile;
+  margin-bottom: 40px;
 }
 
 .composition__title {
@@ -30,6 +25,7 @@
   position: relative;
   margin-bottom: 20px;
   padding-left: 40px;
+  padding-right: 10px;
 
   @include MontReg(14px, 22px);
 
@@ -58,15 +54,14 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 320px;
-  min-height: 300px;
+  min-height: calc(100vw - 20px);
   margin: 10px 0;
 
   &::before {
     content: "";
     position: absolute;
     width: 100%;
-    height: 300px;
+    height: 100%;
     display: block;
     background-color: green;
     opacity: 0.05;
@@ -99,16 +94,16 @@
 .composition__herbslist-item--last::after {
   content: "?";
   position: absolute;
-  left: 100px;
-  top: 20px;
+  left: calc(50% - 60px);
+  top: calc(50% - 130px);
   z-index: -1;
 
   @include ProxBold(276px, 276px, rgba($green-txt, 0.6));
 }
 
 .composition__herbslist-item--last b {
-  margin-top: 130px;
-  padding-right: 100px;
+  margin-top: 40vw;
+  padding-right: calc(100% - 220px);
 
   @include MontBold(14px, 25px);
   text-transform: uppercase;
@@ -129,13 +124,12 @@
 
 @media (min-width: $tablet-width) {
   .composition {
-    @include contTablet;
     position: relative;
   }
 
   .composition__wrapper {
-    width: 540px;
-    padding: 0;
+    width: calc(100% - 228px);
+    margin: 0 auto;
   }
 
   .composition__title {
@@ -152,6 +146,8 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 728px;
+    margin: 0 auto;
     padding: 0 15px;
   }
 
@@ -182,6 +178,7 @@
   }
 
   .composition__herbslist-item--last b {
+    margin-top: 130px;
     padding-right: 80px;
 
     @include MontBold(17px, 26px);
@@ -190,7 +187,7 @@
   .composition__window {
     position: absolute;
     bottom: 0;
-    right: 20px;
+    left: calc(50% + 35px);
     width: 344px;
     height: 330px;
 
@@ -223,6 +220,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    width: 530px;
   }
 
   .composition__title {
@@ -242,6 +240,8 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: auto;
+    margin: 0;
     padding: 0;
     padding-top: 70px;
 

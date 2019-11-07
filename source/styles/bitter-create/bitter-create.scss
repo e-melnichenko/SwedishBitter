@@ -1,24 +1,21 @@
-.bitter-create {
-  width: 320px;
-  margin: 0 auto;
-}
-
-.bitter-create__wrapper-cont {
-  @include contMobile;
-}
-
 .bitter-create__title {
+  padding: 0 20px;
+
   @include MontBold(24px, 30px);
   text-align: center;
 }
 
 .bitter-create__desc {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 0 10px;
+
   @include MontReg(14px, 22px);
 }
 
 .bitter-create b {
   display: block;
-  margin-bottom: 30px;
+  margin: 30px 0;
 
   @include MontBold(12px, 20px);
   text-align: center;
@@ -33,6 +30,7 @@
 @media (min-width: $tablet-width) {
   .bitter-create {
     width: 768px;
+    margin: 0 auto;
   }
 
   .bitter-create__wrapper {

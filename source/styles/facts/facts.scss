@@ -1,8 +1,9 @@
 .facts ul {
-  width: 200px;
+  width: calc(100% - 120px);
   margin: 0 auto;
   padding: 0;
   padding-top: 40px;
+
   list-style: none;
 }
 

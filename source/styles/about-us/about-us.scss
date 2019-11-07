@@ -1,17 +1,13 @@
 .about-us {
-  width: 320px;
+  position: relative;
   min-height: 435px;
-
   margin: 0 auto;
 
   background-image: url("./background-mobile.png");
   background-color: #737588;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-}
-
-.about-us__container {
-  min-height: 375px;
+  background-size: cover;
 }
 
 .about-us__pre-title {
@@ -47,13 +43,13 @@
 }
 
 .about-us__button {
-  width: 320px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
   .about-us {
-    position: relative;
-    width: 768px;
     min-height: 544px;
     margin-bottom: 250px;
 
@@ -61,7 +57,8 @@
   }
 
   .about-us__wrapper {
-    padding-left: 370px;
+    width: 280px;
+    margin-left: 50%;
     padding-top: 100px;
   }
 
@@ -81,7 +78,6 @@
 
   .about-us__description {
     display: block;
-    padding-right: 130px;
 
     @include MontReg(16px, 24px, white);
     text-align: left;
@@ -90,14 +86,16 @@
   .about-us__pack {
     position: absolute;
     top: 80px;
-    left: 20px;
+    right: calc(50% + 66px);
+    width: 298px;
+    height: 648px;
     margin: 0;
   }
 
   .about-us__form {
     position: absolute;
     bottom: -250px;
-    right: 20px;
+    left: calc(50% - 206px);
     display: block;
   }
 
@@ -114,8 +112,8 @@
   }
 
   .about-us__wrapper {
-    padding-left: 600px;
-    padding-top: 185px;
+    width: 570px;
+    margin-left: calc(50% + 10px);
   }
 
   .about-us__title {
@@ -129,15 +127,14 @@
   }
 
   .about-us__pack {
-    position: absolute;
     top: 130px;
-    left: calc((100% - 1200px) / 2 + 145px);
+    right: calc(50% + 155px);
   }
 
   .about-us__form {
     position: absolute;
     bottom: -220px;
-    right: calc((100% - 1200px) / 2 + 15px);
+    left: calc(50% + 10px);
     display: block;
   }
 

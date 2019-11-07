@@ -3,7 +3,8 @@
 }
 
 .extra__wrapper-title {
-  @include contMobile;
+  width: calc(100% - 20px);
+  margin: 0 auto;
   padding-top: 30px;
 }
 

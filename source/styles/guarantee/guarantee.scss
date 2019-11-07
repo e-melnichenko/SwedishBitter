@@ -12,7 +12,7 @@
 }
 
 .guarantee__text {
-  width: 260px;
+  width: calc(100% - 60px);
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 0 30px;
@@ -39,7 +39,8 @@
 }
 
 .guarantee__window p {
-  @include contMobile;
+  width: calc(100% - 20px);
+  margin: 0 auto;
   margin-bottom: 15px;
 
   @include MontReg(14px, 24px);
