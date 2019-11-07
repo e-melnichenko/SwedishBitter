@@ -4,7 +4,10 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/styles/**/*.scss\" --syntax scss",
-    "test": "npm run editorconfig && npm run stylelint"
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "set NODE_ENV=production && gulp build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "editorconfig-cli": [
     "*.json",
@@ -14,16 +17,24 @@
   ],
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "autoprefixer": "^9.7.1",
     "browser-sync": "^2.26.7",
     "buffer-replace": "^1.0.0",
+    "del": "^5.1.0",
+    "gh-pages": "^2.1.1",
     "gulp": "^4.0.2",
+    "gulp-csso": "^3.0.1",
     "gulp-debug": "^4.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^6.1.1",
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-resolve-url": "0.0.2",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-webp": "^4.0.1",
     "stream-combiner2": "^1.1.1",
     "stylelint": "^10.1.0",
     "stylelint-config-htmlacademy": "^0.1.4",
