@@ -8,6 +8,7 @@
   <title>SwedishBitter</title>
 </head>
 <body>
+  <script defer src="main.js"></script>
   <header class="page-header">
     <a class="page-header__logo">
       <picture>
@@ -344,15 +345,17 @@
       <h2 class="reviews__title">Отзывы о «Шведской горечи»</h2>
       <div class="reviews__wrapper-buttons">
         <div class="reviews__wrapper-btn">
-          <button class="reviews__country-btn">от российских потребителей</button>
+          <button class="reviews__country-btn reviews__country-btn--active" data-element="country-btn">от российских потребителей</button>
+          <div class="reviews__color-wrap"></div>
         </div>
         <div class="reviews__wrapper-btn reviews__wrapper-btn--active">
-          <button class="reviews__country-btn  reviews__country-btn--active">от зарубежных потребителей</button>
+          <button class="reviews__country-btn" data-element="country-btn">от зарубежных потребителей</button>
+          <div class="reviews__color-wrap"></div>
         </div>
       </div>
       <div class="reviews__wrapper-list">
         <ul class="reviews__list">
-          <li class="reviews__list-item">
+          <!-- <li class="reviews__list-item">
             <p class="reviews__text">Если время от времени употреблять горечь, то вообще не будет болеть ОРЗ или ангинами. Младшему сыну я развожу раствор слабее (горечь, вода), он с удовольствием пьет, иногда даже сам просит сделать ему горечь. Только делаю меньше половины стакана, чтобы малыш смог выпить.</p>
             <p class="reviews__author">Аноним</p>
           </li>
@@ -367,7 +370,7 @@
           <li class="reviews__list-item">
             <p class="reviews__text">Я покупаю уже готовый сбор шведский бальзам. Отказались от многих лекарственных препаратов благодаря бальзаму. Так что могу только посоветовать самим попробовать, это стоит того.</p>
             <p class="reviews__author">Евгений</p>
-          </li>
+          </li> -->
         </ul>
       </div>
       <div class="reviews__wrapper-down">

@@ -30,14 +30,11 @@ function isChangeIndexHtml(file) {
 gulp.task('assets', function() {
   return gulp.src('source/assets/**/*.*', {since: gulp.lastRun('assets')})
     .pipe(gulpIf(isChangeIndexHtml, through2(function (file, enc, cb) {
-      console.log(isChangeIndexHtml(file));
       file.contents = replace(file.contents, 'href="style.css"', 'href="style.min.css"');
-      console.log(file.stat.mtime);
       file.stat.mtime = new Date();
-      console.log(file.stat.mtime);
       cb(null, file);
     })))
-    // .pipe(newer('build'))
+    .pipe(newer('build'))
     .pipe(debug({title: 'assets'}))
     .pipe(gulp.dest('build'))
 });
@@ -82,6 +79,12 @@ gulp.task('assets:styles', function() {
     .pipe(gulp.dest('build/img'))
 });
 
+gulp.task('api', function() {
+  return gulp.src('source/api/**/*.*', {base: 'source'})
+    .pipe(newer('build'))
+    .pipe(gulp.dest('build'))
+});
+
 gulp.task('clear', function(cb) {
   if(isDevelopment) {
     cb()} else  {
@@ -107,7 +110,8 @@ gulp.task('watch', function() {
   gulp.watch('source/styles/**/*.scss', gulp.series('styles'))
   gulp.watch('source/assets/**/*.*', gulp.series('assets'))
   gulp.watch('source/styles/**/*.png', gulp.series('assets:styles'))
+  gulp.watch('source/api/**/*.*', gulp.series('api'))
 });
 
-gulp.task('build', gulp.series('clear', gulp.parallel('styles', 'assets', 'assets:styles')));
+gulp.task('build', gulp.series('clear', gulp.parallel('styles', 'assets', 'assets:styles', 'api')));
 gulp.task('dev', gulp.series('build', gulp.parallel('watch', 'server')));

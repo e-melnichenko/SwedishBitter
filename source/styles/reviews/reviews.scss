@@ -16,11 +16,17 @@
 }
 
 .reviews__wrapper-btn {
+  position: relative;
   width: 50%;
+}
 
-  &--active {
-    background-color: #f6f9f3;
-  }
+.reviews__color-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 
@@ -36,10 +42,15 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
 
-  &--active {
-    color: $green-txt;
-  }
+.reviews__country-btn--active {
+  color: $green-txt;
+  cursor: default;
+}
+
+.reviews__country-btn--active + .reviews__color-wrap {
+  background-color: #f6f9f3;
 }
 
 .reviews__list {
