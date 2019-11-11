@@ -4,7 +4,8 @@ let activeElem = reviews.querySelector('.reviews__country-btn--active');
 let reviewsList = reviews.querySelector('.reviews__list');
 
 
-const API_URL = 'http://localhost:3000/api';
+// const API_URL = 'http://localhost:3000/api';
+const API_URL = 'https://e-melnichenko.github.io/SwedishBitter/api';
 
 const getReviews = async(fileName) => {
   let response = await fetch(`${API_URL}/${fileName}.json`);
