@@ -3,7 +3,7 @@ const reviews = document.querySelector('.reviews');
 let activeElem = reviews.querySelector('.reviews__country-btn--active');
 let reviewsList = reviews.querySelector('.reviews__list');
 
-
+console.log('---', 'Hello Egor!')
 // const API_URL = 'http://localhost:3000/api';
 const API_URL = 'https://e-melnichenko.github.io/SwedishBitter/api';
 
